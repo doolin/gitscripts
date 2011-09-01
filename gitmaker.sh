@@ -22,7 +22,7 @@ echo "Here is a second file" >> file2.txt
 git add file2.txt
 git commit -m"First commit for file2.txt"
 
-set foo = `git reflog`
-echo foo
+foo=`git reflog`
+echo "\nReflog:\n$foo"
 
 echo "Now do git show-branch --color --more=10"
