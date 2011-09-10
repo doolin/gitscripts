@@ -65,3 +65,14 @@ git reflog
 
 echo "Now do git show-branch --color --more=10"
 echo "This repo can be used for examining how to cherry pick"
+
+
+
+echo "Now to demonstrate how diff and patch (apply?) work"
+# 1. Make a new branch
+# 2. Make a change in an existing file
+# 3. commit, diff the changed file to the original branch
+# 4. checkout the original branch
+# 5. Apply the patch
+# 6. Check for differences between the changed and the original
+
