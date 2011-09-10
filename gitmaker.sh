@@ -115,3 +115,7 @@ ${ulon}This is ul${uloff} and this is not
 ${invon}This is inv${invoff} and this is not
 ${yellowf}${redb}Warning I${yellowb}${redf}Warning II${reset}
 EOF
+
+# More:
+# http://linuxtidbits.wordpress.com/2008/08/13/output-color-on-bash-scripts-advanced/
+# http://tldp.org/LDP/abs/html/colorizing.html
