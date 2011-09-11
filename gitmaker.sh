@@ -71,10 +71,27 @@ echo "This repo can be used for examining how to cherry pick"
 echo "Now to demonstrate how diff and patch (apply?) work"
 # 1. Make a new branch
 # 2. Make a change in an existing file
-# 3. commit, diff the changed file to the original branch
+# 3. commit
 # 4. checkout the original branch
-# 5. Apply the patch
-# 6. Check for differences between the changed and the original
+# 5. diff the changed file to the original branch
+# 6. Apply the patch
+# 7. Check for differences between the changed and the original
+
+## Make a new branch
+git checkout -b newbranch
+
+# Make change to existing file
+echo "\nFile 1 newbranch edit." >> file1.txt
+
+# Commit the change in newbranch
+git add file1.txt
+git commit -m"First newbranch commit for file1.txt"
+
+# Check out master
+git checkout master
+
+# diff the files between master and newbranch
+git diff -p master:file1.txt newbranch:file1.txt
 
 
 # Makes 'em blinkin':
