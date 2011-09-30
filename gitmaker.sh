@@ -136,3 +136,41 @@ EOF
 # More:
 # http://linuxtidbits.wordpress.com/2008/08/13/output-color-on-bash-scripts-advanced/
 # http://tldp.org/LDP/abs/html/colorizing.html
+
+
+
+
+echo  "\033[38;5;148m${cyanf}Git stash!${reset}"
+# Does it stash files which are not under vcs? No. It returns 
+# No local changes to save
+# But, creating a new file and adding it will allow stashing:
+echo "\nFile 4." > file4.txt
+echo "${blackf}Stash it:${reset}"
+git stash
+git add file4.txt
+git status
+git stash
+echo "${blackf}Let's pop it and check status:${reset}"
+git stash pop
+git status
+echo "${blackf}Make a second edit to file4.txt, then show status:${reset}"
+echo "\nFile 4 second edit." >> file4.txt
+git status
+cat << EOF
+${blackf}The upshot is that we can stash files that are added into
+${blackf}the index, whether or not they are in staging. So a brand new file
+${blackf}won't stash until it's added. But an existing file with a modification
+${blackf}will stash without being added to staging.  This means that git add
+${blackf}is overloaded to mean either 1. add to index, or 2. add to staging,
+${blackf}where a new file getting added to the index is also and automatically
+${blackf}added to staging. TODO: check the definitions of "index" "staging"
+${blackf}to ensure I understand the terms correctly.${reset}
+EOF
+echo  "\033[38;5;148m${cyanf}STASH, BRANCH and POP${reset}"
+echo "${purplef}Here's' a great little exercise showing how to move working"
+echo "${purplef}code to a new branch, without polluting the current branch."
+echo "${purplef}See http://project10000.net/1314/status-stars-in-the-feed/."
+
+
+
+
