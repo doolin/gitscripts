@@ -2,7 +2,7 @@
 
 
 # http://randyfay.com/node/91
-
+# http://darwinweb.net/articles/the-case-for-git-rebase
 # Everything below this line needs changing.
 
 echo "This script needs to be run from /tmp"
