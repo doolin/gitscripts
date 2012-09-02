@@ -1,7 +1,6 @@
 #!/bin/sh
 
-echo "This script needs to be run from /tmp"
-#exit
+echo "This script ought to be run in /tmp"
 
 # Return values from command line:
 # http://git.661346.n2.nabble.com/command-return-values-td5279263.html
@@ -106,7 +105,7 @@ initializeANSI()
   blackf="${esc}[30m";   redf="${esc}[31m";    greenf="${esc}[32m"
   yellowf="${esc}[33m"   bluef="${esc}[34m";   purplef="${esc}[35m"
   cyanf="${esc}[36m";    whitef="${esc}[37m"
-  
+
   blackb="${esc}[40m";   redb="${esc}[41m";    greenb="${esc}[42m"
   yellowb="${esc}[43m"   blueb="${esc}[44m";   purpleb="${esc}[45m"
   cyanb="${esc}[46m";    whiteb="${esc}[47m"
