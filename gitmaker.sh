@@ -10,6 +10,8 @@ rm -rf gittester
 mkdir "gittester"
 cd gittester
 git init
+git config user.name "git tester"
+git config user.email "git@gittester.git"
 
 echo "File 1 first edit." >> file1.txt
 git add file1.txt
